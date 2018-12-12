@@ -9,5 +9,6 @@ export default props => `
   <body style="padding: 0; margin: 0;">
     <div id="root">${props.content}</div>
   </body>
+  ${(props.modules || []).map(path => `<script src="${path}.js"></script>`).join('\n')}
 </html>
 `;
