@@ -10,7 +10,7 @@ if (mode === 'production') {
 module.exports = [
   createConfig({
     entry: {
-      index: './src/client/index.js',
+      main: './src/client/main/index.js',
     },
     output: {
       path: `${__dirname}/dist/client`,

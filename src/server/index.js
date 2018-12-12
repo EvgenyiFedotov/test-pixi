@@ -1,6 +1,6 @@
 import express from 'express';
 import http from 'http';
-import client from '../client';
+import mainServer from '../client/main/server';
 
 const PORT = 5000;
 const app = express();
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.static('dist/client'));
 app.get('/favicon.ico', (req, res) => res.sendStatus(404));
 app.get('/', (req, res) => {
-  res.send(client.app.server());
+  res.send(mainServer());
 });
 
 httpServer.listen(PORT, () => {
