@@ -6,7 +6,7 @@ import App from './App';
 
 export default (content) => {
   ReactDOM.hydrate(
-    <App>{content}</App>,
+    <App>{content && content()}</App>,
     document.getElementById('root'),
   );
 };
